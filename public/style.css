@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'april_juneregular';
+  src: url('./font/april_june-webfont.woff2') format('woff2'),
+    url('./font/april_june-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+:root {
+  --color-primary: #fdfcf963;
+  --color-secondary: #cbcec9;
+  --color-secondary-dark: #636363;
+  --color-Yellow: #ebb51f;
+  --color-Yellow-dark: #d39b2c;
+  --spacing: 0.2rem;
+  --transition: all 0.3s linear;
+}
+
+body {
+  color: var(--color-secondary-dark);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 50px;
+}
+.left {
+  min-width: 70%;
+  letter-spacing: var(--spacing);
+}
+
+.navList {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 1rem;
+}
+
+.navList a {
+  color: var(--color-secondary-dark);
+  font-size: 1.1rem;
+  line-height: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.navList a:hover {
+  font-size: 1.15rem;
+}
+
+.hero {
+  height: 70%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroText__Title {
+  font-size: calc(30px + 1vw);
+  padding: 1rem;
+}
+
+.heroText__underTitle {
+  max-width: 70%;
+}
+
+.hero__btn {
+  margin: 2rem;
+  background-color: var(--color-Yellow);
+  padding: 10px 30px;
+  border-radius: 16px;
+  border: 1px solid var(--color-Yellow-dark);
+  transition: all 0.35s ease;
+  cursor: pointer;
+
+  outline: 1px solid var(--color-secondary-dark);
+  outline-offset: 5px;
+}
+
+.hero__btn:hover {
+  background-color: var(--color-Yellow-dark);
+  border: 1px solid var(--color-Yellow);
+  color: #000;
+}
+/* Right Side */
+
+.heroRight {
+  display: block;
+  /* max-width: 100%; */
+  margin: 0 auto;
+  border-left: 1px solid var(--color-Yellow-dark);
+  position: relative;
+  width: 100%;
+  height: auto; /* specify a height for the container */
+}
+
+.heroRight img {
+  width: 100%;
+  height: 100%;
+}
+
+/* POPUP PULS BTN */
+.info-PopUp {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.info-popUp__btn {
+  padding: 10px;
+  background-color: transparent;
+  border: 3px solid var(--color-Yellow-dark);
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  animation: gin infinite 1.3s linear;
+}
+.info-popUp__btn:hover {
+  background-color: var(--color-Yellow);
+}
+
+@keyframes gin {
+  0% {
+    background-color: var(--color-Yellow);
+  }
+}
+
+.popUp {
+  background-color: rgba(255, 255, 255, 0.74);
+  width: 200px;
+  height: 100px;
+
+  border-radius: 20px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* BANNER SECTION */
+.underHeader {
+  border-top: 10px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(
+    to left,
+    var(--color-Yellow),
+    #a8682c,
+    #f2e63a
+  );
+}
+.banner-coctail {
+  display: flex;
+  justify-content: space-around;
+
+  max-width: 100vw;
+}
+.banner-coctail img {
+  width: 100px;
+  transition: var(--transition);
+}
+
+.banner-coctail img:hover {
+  transform: scale(0.9);
+}
+
+/* Section Season Coctail */
+.season__coctails {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 6rem;
+}
+
+.season__coctails--header {
+  text-align: center;
+}
+.season__coctails--header h4 {
+  font-size: calc(20px + 0.7vw);
+  font-weight: 400;
+}
+
+.season__coctails--header h4,
+p {
+  letter-spacing: 2px;
+}
+
+.season__coctails--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 4rem 0;
+}
+.season__coctails--icon img {
+  width: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.season__coctails--icon img:hover {
+  transform: scale(0.8);
+}
+
+/* Cards */
+.season__coctails--cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.season__coctails--card {
+  width: 250px;
+}
+.season__coctails--card img {
+  width: 50%;
+}
+.season__coctails--card--name {
+  font-size: 3rem;
+  font-family: 'april_juneregular', sans-serif;
+}
+.ingredients__title,
+.instructions__title {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.season__coctails--card--ingredients,
+.season__coctails--card--instructions {
+  padding: 1rem;
+}
